@@ -1,0 +1,128 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>protfolio</title>
+	<link rel="stylesheet" href="{% static 'css/main.css'  %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+</head>
+<body>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-body h-100  border-info" id="profile-wrapper">
+					<img id="profile-pic" src="{% static 'images/IMG.jpeg' %}" width="500px">
+					<hr>
+					<h4>Hi I'm Lakshmi Kanth!</h4>
+					<p>Python Developer & AI/ML Enthusiast</p>
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="card card-body h-100  border-info">
+					<h4>About Me</h4>
+					<hr>
+					<p>I’m a Computer Science graduate passionate about backend development, AI/ML, and full-stack engineering. I’ve worked on projects involving Django,FastAPI, machine learning models, IoT integrations, and AI-powered web scraping.<br>
+<br>
+I enjoy building solutions that blend clean engineering with intelligent automation — whether it’s creating an AI agent, developing ML-driven prediction systems, or designing user-friendly web apps.<br>
+<br>
+
+I’m currently seeking an entry-level role where I can apply my skills, contribute to real-world challenges, and grow as a software professional.</p>
+
+					<ul class="social-links">
+						<li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=801edpj">
+							<img class="social" src="{% static 'images/instagram.png' %}"></a></li>
+						<li><a href="https://github.com/Kantha07-star/">
+							<img class="social" src="{% static 'images/github.jpg' %}"></a></li>
+						<li><a href="https://www.linkedin.com/in/lakshmi-kanth-00bb40304">
+							<img class="social" src="{% static 'images/linkedin.png' %}"></a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>My Experience as an Intern</h5>
+					<hr>
+					<p>Python Full Stack Intern — Pentagon Space (Jul 2025 – Dec 2025)</p>
+					<p>Built full-stack applications using Python, Django, and React.js 
+					<br>
+					<p>Assisted with API development and MySQL database integration</p>
+					<p>Gained experience in deployment, version control, and real-world development workflows</p>
+					</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Skills</h5>
+					<hr>
+					<p>Programming : Python, C</p>
+					<p>Frameworks & Libraries : FastAPI, Django, React.js, Pandas, NumPy, Scikit-learn</p>
+					<p>Web Technologies : HTML, CSS, JavaScript</p>
+					<p>Database : MySQL</p>
+					<p>Tools : Git, GitHub, VS Code, PyCharm, Jupyter, Anaconda, Google Colab</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Education</h5>
+					<hr>
+					<p>B.Tech in Information Science & Engineering — Reva University, Bangalore (2022–2025)</p>
+
+					<p>Diploma in Mechanical Engineering — Govt Polytechnic, Bagepalli (2019–2022)</p>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Projects</h5>
+				<hr>
+				<p>AI-Driven IoT Framework for Crop Suitability Prediction</p>
+				<p>Tech: Python, Flask, Firebase, Scikit-learn, Pandas, NumPy, OpenWeather API
+A real-time IoT-powered system that uses soil sensors, cloud storage, and ML models to recommend suitable crops and soil improvements. Integrated weather forecasting using OpenWeather API and deployed via a Flask-based web interface.</p>
+
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-body h-100">
+					<h5>Contact Me</h5>
+					<hr>
+					<form method="post" action="">
+						{% csrf_token %}
+						<div class="form-group">
+							<label for="name">Name:</label>
+							<input type="text" class="form-control" id="name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" class="form-control" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<lable for="phone">Phone:</lable>
+							<input type="phone" class="form-control" id="phone" name="phone" required>
+
+						</div>
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">Send</button>
+
+					</form>
+		
+	</div>
+</body>
+</html>
